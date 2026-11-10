@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>名古屋・京都 7日行程手冊</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Huninn&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FFFCF6;--ink:#3E3A39;--co:#F2A497;--ye:#F6D27A;--aq:#A8D3E6;--gr:#B9DAA5;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:70px;background:var(--bg)}
+*,*::before,*::after{box-sizing:inherit;margin:0}
+body{background:var(--bg);color:var(--ink);font:16px/1.7 'Huninn','Noto Sans TC','PingFang TC',sans-serif;max-width:560px;margin:0 auto;padding:62px 14px 40px}
+nav{position:fixed;top:0;left:0;right:0;z-index:10;background:var(--bg);border-bottom:3px solid var(--ink);padding:calc(8px + env(safe-area-inset-top,0px)) 10px 8px;display:flex;gap:8px;overflow-x:auto;justify-content:safe center}
+nav a{flex:none;color:var(--ink);text-decoration:none;border:3px solid var(--ink);border-radius:99px;padding:0 14px;font-size:15px}
+nav a:nth-child(4n+1){background:var(--co)}nav a:nth-child(4n+2){background:var(--ye)}nav a:nth-child(4n+3){background:var(--aq)}nav a:nth-child(4n){background:var(--gr)}
+nav a:focus-visible,button:focus-visible,.ck input:focus-visible+i{outline:3px solid var(--ink);outline-offset:2px}
+section{margin-top:26px}
+h2{font-size:22px;font-weight:400;display:inline-block;background:var(--ye);border:3px solid var(--ink);border-radius:99px;padding:0 18px;margin-bottom:12px}
+.card{background:var(--bg);border:3px solid var(--ink);border-radius:26px;padding:16px;margin-bottom:14px}
+.hero{padding:12px;text-align:center}
+.hero svg{width:100%;height:auto;display:block}
+h1{font-size:28px;font-weight:400;margin:10px 0 0;line-height:1.3}
+.sub{font-size:14px;margin-bottom:10px}
+.cd{display:flex;gap:8px;justify-content:center}
+.cd div{flex:1;max-width:84px;border:3px solid var(--ink);border-radius:18px;padding:4px 0}
+.cd div:nth-child(1){background:var(--co)}.cd div:nth-child(2){background:var(--ye)}.cd div:nth-child(3){background:var(--aq)}.cd div:nth-child(4){background:var(--gr)}
+.cd b{display:block;font-size:26px;font-weight:400;line-height:1.2}.cd small{font-size:12px}
+.msg{border:3px solid var(--ink);border-radius:18px;background:var(--gr);padding:6px 12px}
+.fl .chip{display:inline-block;border:3px solid var(--ink);border-radius:99px;padding:0 14px;font-size:14px;background:var(--co)}
+.fl.b .chip{background:var(--aq)}
+.rt{display:flex;align-items:center;gap:8px;margin:10px 0;font-size:30px;line-height:1.2}
+.rt span{flex:none}.rt hr{flex:1;border:0;border-top:3px dashed var(--ink)}
+.fl p{font-size:14px}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 10px}
+.tab{flex:none;width:62px;font:inherit;font-size:13px;line-height:1.3;color:var(--ink);background:var(--bg);border:3px solid var(--ink);border-radius:18px;padding:4px 0;cursor:pointer}
+.tab b{display:block;font-size:17px;font-weight:400}
+.tab.on{background:var(--ye);animation:pop .5s cubic-bezier(.3,1.7,.5,1)}
+.dh{border:3px solid var(--ink);border-radius:22px;background:var(--aq);padding:10px 14px;margin-bottom:14px;animation:pop .45s cubic-bezier(.3,1.6,.5,1)}
+.dh b{display:block;font-size:18px;font-weight:400;line-height:1.4}.dh small{font-size:13px}
+.tl{position:relative;padding-left:28px}
+.tl::before{content:'';position:absolute;left:8px;top:6px;bottom:6px;border-left:3px dashed var(--ink)}
+.it{position:relative;border:3px solid var(--ink);border-radius:20px;padding:8px 12px;margin-bottom:14px;animation:pop .5s cubic-bezier(.3,1.6,.5,1) both;animation-delay:calc(var(--i)*70ms)}
+.it::before{content:'';position:absolute;left:-28px;top:14px;width:19px;height:19px;border-radius:50%;border:3px solid var(--ink);background:var(--c,var(--bg))}
+.it.F{--c:var(--co)}.it.T{--c:var(--aq)}.it.S{--c:var(--gr)}.it.B{--c:var(--ye)}
+.it h3{font-size:17px;font-weight:400;line-height:1.45;margin:2px 0}
+.it p{font-size:14px}
+.tg{display:inline-block;font-size:12px;line-height:1.5;border:2px solid var(--ink);border-radius:99px;padding:0 9px;margin:0 4px 2px 0}
+.tg.F{background:var(--co)}.tg.T{background:var(--aq)}.tg.S{background:var(--gr)}.tg.B{background:var(--ye)}.tg.W{background:#fff}.tg.K{background:#fff;border-style:dashed}
+.must{display:inline-block;font-size:12px;background:var(--co);border:2px solid var(--ink);border-radius:10px;padding:0 8px;margin-left:4px;transform:rotate(-4deg)}
+.ck{display:flex;gap:10px;align-items:flex-start;padding:5px 0;cursor:pointer}
+.ck input{position:absolute;opacity:0}
+.ck i{flex:none;width:26px;height:26px;border:3px solid var(--ink);border-radius:9px;margin-top:1px;background:var(--bg);position:relative}
+.ck input:checked+i{background:var(--gr);animation:pop .4s cubic-bezier(.3,1.8,.5,1)}
+.ck input:checked+i::after{content:'';position:absolute;left:7px;top:1px;width:7px;height:13px;border:solid var(--ink);border-width:0 3px 3px 0;transform:rotate(45deg)}
+.ck input:checked~span{text-decoration:line-through;opacity:.55}
+.prog{font-size:13px;margin-bottom:6px}
+.gt{display:inline-block;background:var(--aq);border:2px solid var(--ink);border-radius:99px;padding:0 12px;font-size:14px;margin:8px 0 2px}
+.stay h3{font-size:18px;font-weight:400}.stay p{font-size:14px}
+footer{text-align:center;font-size:13px;margin-top:30px}
+@keyframes pop{0%{transform:scale(.8) translateY(8px);opacity:0}60%{transform:scale(1.06)}100%{transform:none;opacity:1}}
+@keyframes bob{50%{transform:translateY(-6px)}}
+@keyframes dr{50%{transform:translateX(16px)}}
+@keyframes tr{to{transform:translateX(170px)}}
+.sun{animation:bob 4s ease-in-out infinite}.c1{animation:dr 7s ease-in-out infinite}.c2{animation:dr 9s ease-in-out infinite reverse}.train{animation:tr 8s ease-in-out infinite alternate}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav><a href="#home">首頁</a><a href="#flight">航班</a><a href="#plan">行程</a><a href="#todo">待辦</a><a href="#stay">住宿</a><a href="#pre">出發前</a><a href="#pack">行李</a></nav>
+
+<section id="home" style="margin-top:0">
+<div class="card hero">
+<svg viewBox="0 0 360 230" role="img" aria-label="名古屋城、鳥居與新幹線的插圖">
+<g stroke="#3E3A39" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+<rect x="1.5" y="1.5" width="357" height="227" rx="24" fill="#A8D3E6"/>
+<circle class="sun" cx="305" cy="46" r="20" fill="#F6D27A"/>
+<path class="c1" d="M28 62h58a13 13 0 000-26 17 17 0 00-32-3 14 14 0 00-26 11 9 9 0 000 18z" fill="#fff"/>
+<path class="c2" d="M200 92h40a10 10 0 000-20 13 13 0 00-24-2 10 10 0 00-16 8 7 7 0 000 14z" fill="#fff"/>
+<path d="M1.5 180H358.5V204a24 24 0 01-24 24H25.5a24 24 0 01-24-24z" fill="#B9DAA5"/>
+<path d="M70 180l10-36h100l10 36z" fill="#FFFCF6"/>
+<rect x="88" y="116" width="84" height="28" fill="#FFFCF6"/>
+<path d="M76 118l14-20h80l14 20z" fill="#B9DAA5"/>
+<rect x="104" y="80" width="52" height="18" fill="#FFFCF6"/>
+<path d="M94 82l12-18h48l12 18z" fill="#B9DAA5"/>
+<path d="M120 64l10-18 10 18z" fill="#F6D27A"/>
+<rect x="104" y="122" width="12" height="16" rx="3" fill="#F6D27A"/><rect x="124" y="122" width="12" height="16" rx="3" fill="#F6D27A"/><rect x="144" y="122" width="12" height="16" rx="3" fill="#F6D27A"/>
+<rect x="243" y="118" width="10" height="62" fill="#F2A497"/><rect x="287" y="118" width="10" height="62" fill="#F2A497"/>
+<rect x="240" y="124" width="60" height="9" fill="#F2A497"/>
+<path d="M228 100q42 10 84 0l-2 14q-40 9-80 0z" fill="#F2A497"/>
+<g class="train"><path d="M10 190h128c20 0 32 8 38 13-6 5-18 13-38 13H10a10 10 0 01-10-10v-6a10 10 0 0110-10z" fill="#FFFCF6"/>
+<rect x="6" y="202" width="150" height="5" fill="#A8D3E6" stroke="none"/>
+<rect x="18" y="194" width="14" height="7" rx="2" fill="#F6D27A"/><rect x="44" y="194" width="14" height="7" rx="2" fill="#F6D27A"/><rect x="70" y="194" width="14" height="7" rx="2" fill="#F6D27A"/><rect x="96" y="194" width="14" height="7" rx="2" fill="#F6D27A"/></g>
+</g>
+</svg>
+<h1>名古屋・京都<br>7日行程手冊</h1>
+<p class="sub">2026.01.11 – 01.17　名古屋 5 晚 + 京都 1 晚</p>
+<div id="cd" aria-live="off"></div>
+</div>
+</section>
+
+<section id="flight"><h2>航班</h2>
+<div class="card fl"><span class="chip">去程　1/11（一）</span>
+<div class="rt"><span>TPE</span><hr><span>NGO</span></div>
+<p>台灣虎航 IT206<br>08:45 桃園 T2 起飛 → 12:25 中部國際機場 T1 抵達</p></div>
+<div class="card fl b"><span class="chip">回程　1/17（日）</span>
+<div class="rt"><span>KIX</span><hr><span>TPE</span></div>
+<p>長榮航空 BR129<br>18:10 關西機場 T1 起飛 → 20:25 桃園 T2 抵達</p></div>
+</section>
+
+<section id="plan"><h2>每日行程</h2>
+<div class="tabs" id="tabs" role="tablist" aria-label="選擇日期"></div>
+<div id="panel" aria-live="polite"></div>
+</section>
+
+<section id="todo"><h2>待辦清單</h2>
+<div class="card"><div class="prog" id="p-todo"></div><div id="l-todo"></div></div>
+</section>
+
+<section id="stay"><h2>住宿資訊</h2>
+<div class="card stay"><h3>Hotel Keihan Nagoya</h3><p>1/11 – 1/16，共 5 晚<br>地鐵櫻通線久屋大通站 4A / 4B 出口，步行約 2–3 分鐘</p></div>
+<div class="card stay"><h3>京都住宿</h3><p>1/16 – 1/17，共 1 晚<br>京都市下京區松原通丸九東入俗成町 438<br>京都站搭地下鐵烏丸線，到四條／五條站步行</p></div>
+</section>
+
+<section id="pre"><h2>出發前清單</h2>
+<div class="card"><div class="prog" id="p-pre"></div><div id="l-pre"></div></div>
+</section>
+
+<section id="pack"><h2>行李清單</h2>
+<div class="card"><div class="prog" id="p-pack"></div><div id="l-pack"></div></div>
+</section>
+
+<footer>Nagoya &amp; Kyoto Travel Guide<br>旅途平安，玩得開心</footer>
+
+<script>
+const TG={F:'航班',T:'電車／特急',S:'地鐵',B:'巴士',W:'步行',K:'票券'};
+const D=[
+{d:'1/11',w:'一',t:'抵達名古屋 → 名古屋城 → 榮商圈夜景',s:'住 Hotel Keihan Nagoya',i:[
+['F','桃園 → 中部國際機場','08:45 起飛、12:25 抵達 T1（IT206）。領完行李走到「Access Plaza／名鐵」，T1 四樓商店街可用餐採買。'],
+['T,K','名鐵 μ-SKY 特急 → 名鐵名古屋站','約 28 分鐘。需「乘車券 + μticket 指定席券（450円）」。'],
+['S,W','地鐵櫻通線 → 飯店寄放行李','名古屋站搭櫻通線（往德重）1 站到久屋大通，4A / 4B 出口步行 2–3 分鐘。'],
+['S,W','名古屋城','久屋大通搭名城線到名古屋城站，7 號出口步行；參觀天守閣與庭園。',1],
+['W','榮商圈夜景','Oasis 21、MIRAI TOWER 周邊散步，再回飯店。']]},
+{d:'1/12',w:'二',t:'飛驒高山老街 + 白川鄉合掌村一日團',s:'住 Hotel Keihan Nagoya',i:[
+['S,W','飯店 → 名古屋站','久屋大通搭櫻通線到名古屋站，步行 5–10 分鐘到集合點。'],
+['B,K','一日團集合 07:30／出發 08:00','名古屋 VIP LINER 巴士站（〒453-0015）。依 KKday 憑證時間，提早 20 分鐘報到。'],
+['B','飛驒高山古街 + 白川鄉合掌村','品嚐飛驒牛握壽司，欣賞世界遺產合掌村的冬日雪景，傍晚隨車返回名古屋站。',1],
+['S','回飯店 + 晚餐','名古屋站搭櫻通線回久屋大通；晚餐吃手羽先或味噌豬排。']]},
+{d:'1/13',w:'三',t:'國寶犬山城 + 城下町老街 + 大須商店街',s:'住 Hotel Keihan Nagoya',i:[
+['S','09:00 左右出發','久屋大通搭地鐵到名古屋站。'],
+['T','名鐵犬山線 → 犬山站','名古屋站搭特急／快速急行，約 30–35 分鐘。'],
+['W','犬山城 + 城下町（午餐）','步行 15–20 分鐘。犬山城天守 → 三光稻荷神社（心形繪馬）→ 城下町享用串燒、五平餅。',1],
+['T','16:30–17:00 搭名鐵返回','下午可續逛神社，欣賞木曽川河畔景色。'],
+['S','大須商店街夜市','名古屋站搭東山線到伏見，轉鶴舞線到大須觀音站，逛小吃與雜貨。']]},
+{d:'1/14',w:'四',t:'伊勢神宮 + 長島 Outlet + 名花之里點燈',s:'住 Hotel Keihan Nagoya',i:[
+['T,K','06:45 前搭近鐵特急往伊勢','近鐵名古屋站 → 宇治山田／伊勢市，約 1 小時 20 分。全車指定席，需另購特急券。'],
+['B','三重交通巴士 → 伊勢神宮','今日排「內宮 + 托福橫丁」，外宮不排，留時間給長島與點燈。',1],
+['T,B','12:30 前後移動：伊勢 → 長島 Outlet','近鐵往桑名方向，再轉三重交通巴士直達 Outlet，含候車約 1.5–2 小時。'],
+['B','15:00 逛 Outlet → 17:00 名花之里','購物、下午茶後前往名花之里，欣賞日本最大規模的冬季點燈。',1],
+['B,T,S,W','夜間回程五步驟','① 名花之里接駁巴士 → 近鐵桑名站　② 近鐵 → 近鐵名古屋站　③ 站內轉地鐵名古屋站　④ 櫻通線 1 站到久屋大通　⑤ 4A / 4B 出口步行回飯店。']]},
+{d:'1/15',w:'五',t:'吉卜力公園全日探險（愛・地球博紀念公園）',s:'住 Hotel Keihan Nagoya',i:[
+['S','08:35 左右出發','久屋大通搭櫻通線到名古屋，轉東山線到終點藤が丘（或先到榮轉東山線）。'],
+['T','轉乘 Linimo 磁浮電車','藤が丘轉 Linimo，到「愛・地球博紀念公園」站。'],
+['W','10:00 準時入園：吉卜力整日探險','09:30 前抵達，依票券時段入場。大倉庫、魔女之谷、青春之丘玩一整天，不排其他行程。',1],
+['T,S','閉園後原路返回','Linimo → 藤が丘 → 東山線到榮 → 名城線到久屋大通 → 步行回飯店。']]},
+{d:'1/16',w:'六',t:'清洲城 → 熱田神宮 → 新幹線到京都 → 錦市場・花見小路',s:'住京都（松原通丸九東入俗成町 438）',i:[
+['T','上午：清洲城','久屋大通 → 名古屋站 → 名鐵到新清洲站，步行到清洲城（織田信長的居城）。'],
+['T','名鐵直達熱田神宮','新清洲站搭名鐵直達神宮前站，步行參拜名古屋總鎮守。',1],
+['T,K','東海道新幹線 → 京都（約 35 分）','神宮前搭名鐵回名古屋站，換 JR 東海道新幹線直達京都站。'],
+['S,W','京都站 → 住宿 Check-in','搭地下鐵烏丸線到四條／五條站，步行到住宿寄放行李。'],
+['W','傍晚：錦市場 + 花見小路','從錦市場逛到花見小路，夜燈下走過石板路與古町家，再回住宿休息。',1]]},
+{d:'1/17',w:'日',t:'伏見桃山酒藏 → HARUKA 到關西機場 → 台北',s:'長榮 BR129 返台',i:[
+['S,T','早上：伏見桃山酒藏','烏丸線到竹田，轉近鐵京都線到桃山御陵前；逛月桂冠大倉紀念館與酒藏街。'],
+['T','中午：回京都站午餐、取行李','近鐵京都線回京都站，在車站大樓／Porta 地下街用餐。'],
+['T,K','13:00 JR 特急 HARUKA → 關西機場','車程約 80 分鐘，約 14:20 抵達；走到 T1 辦理長榮報到。'],
+['F','18:10 長榮 BR129 → 桃園 T2','20:25 抵達。帶著滿滿回憶平安回家！']]}
+];
+const L={
+todo:['買 μ-SKY 的 μticket 指定席券（1/11）','確認 KKday 高山白川鄉一日團憑證（1/12）','購買近鐵特急券：名古屋 → 伊勢（1/14）','確認名花之里接駁與長島 Outlet 巴士時間（1/14）','購買吉卜力公園門票，10:00 入場（1/15）','預訂東海道新幹線：名古屋 → 京都（1/16）','預訂 HARUKA 13:00 班次（1/17）'],
+pre:['護照（效期 6 個月以上）','填寫 Visit Japan Web','網路：eSIM 或 Wi-Fi 分享器','日圓現金與信用卡','交通 IC 卡（或手機 IC）','確認機票、住宿憑證與旅平險','Google 地圖離線下載名古屋、京都','出發前一天線上報到'],
+pack:[['證件與錢','護照、機票與住宿截圖、日圓、信用卡、零錢包'],['冬季衣物','發熱衣、羽絨外套、圍巾、手套、毛帽、保暖襪'],['電子用品','手機、充電線、行動電源、轉接頭、耳機'],['盥洗與藥品','牙刷組、保養品、常備藥、口罩、護唇膏'],['其他','好走的鞋、暖暖包、折疊購物袋、雨傘、小背包']]
+};
+let st={};try{st=JSON.parse(localStorage.getItem('nk-ck')||'{}')}catch(e){}
+const save=()=>{try{localStorage.setItem('nk-ck',JSON.stringify(st))}catch(e){}};
+const RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const S0=new Date('2026-01-11T08:45:00+08:00'),E0=new Date('2026-01-17T20:25:00+08:00');
+function tick(){const n=new Date(),el=document.getElementById('cd');
+if(n<S0){const d=S0-n,v=[[Math.floor(d/864e5),'天'],[Math.floor(d/36e5)%24,'時'],[Math.floor(d/6e4)%60,'分'],[Math.floor(d/1e3)%60,'秒']];
+el.innerHTML='<p class="sub">出發倒數</p><div class="cd">'+v.map(x=>`<div><b>${x[0]}</b><small>${x[1]}</small></div>`).join('')+'</div>'}
+else if(n<=E0){el.innerHTML='<div class="msg">旅程進行中，今天是第 '+(Math.floor((n-S0)/864e5)+1)+' 天</div>'}
+else el.innerHTML='<div class="msg">旅程圓滿結束，回憶滿滿</div>'}
+tick();setInterval(tick,1000);
+const tabs=document.getElementById('tabs'),panel=document.getElementById('panel');
+tabs.innerHTML=D.map((x,k)=>`<button class="tab" role="tab" data-k="${k}"><b>D${k+1}</b>${x.d}（${x.w}）</button>`).join('');
+function show(k,fromUser){const x=D[k];
+[...tabs.children].forEach((b,j)=>{b.classList.toggle('on',j==k);b.setAttribute('aria-selected',j==k)});
+panel.innerHTML=`<div class="dh"><b>Day ${k+1}　${x.t}</b><small>${x.d}（${x.w}）｜${x.s}</small></div><div class="tl">`+x.i.map((it,j)=>{const tg=it[0].split(',');
+return `<div class="it ${tg[0]}" style="--i:${j}"><div>${tg.map(c=>`<span class="tg ${c}">${TG[c]}</span>`).join('')}${it[3]?'<span class="must">必去</span>':''}</div><h3>${it[1]}</h3><p>${it[2]}</p></div>`}).join('')+'</div>';
+if(fromUser)tabs.children[k].scrollIntoView({inline:'center',block:'nearest',behavior:RM?'auto':'smooth'})}
+tabs.onclick=e=>{const b=e.target.closest('.tab');if(b)show(+b.dataset.k,1)};
+const now=new Date();show(now>=S0&&now<=E0?Math.min(6,Math.floor((now-S0)/864e5)):0);
+function list(id,groups){const el=document.getElementById('l-'+id);let n=0,html='';
+groups.forEach((g,gi)=>{if(g.t)html+=`<div class="gt">${g.t}</div>`;g.a.forEach((txt,j)=>{const key=id+gi+'_'+j;n++;html+=`<label class="ck"><input type="checkbox" data-key="${key}" ${st[key]?'checked':''}><i></i><span>${txt}</span></label>`})});
+el.innerHTML=html;
+const upd=()=>{const c=el.querySelectorAll('input:checked').length;document.getElementById('p-'+id).textContent=`已完成 ${c} / ${n}`};upd();
+el.onchange=e=>{const k=e.target.dataset.key;if(e.target.checked)st[k]=1;else delete st[k];save();upd()}}
+list('todo',[{a:L.todo}]);list('pre',[{a:L.pre}]);
+list('pack',L.pack.map(g=>({t:g[0],a:g[1].split('、')})));
+</script>
+</body>
+</html>
