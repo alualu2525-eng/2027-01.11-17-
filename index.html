@@ -53,7 +53,7 @@ h1{font-size:28px;font-weight:400;margin:10px 0 0;line-height:1.3}
 .must{display:inline-block;font-size:12px;background:var(--co);border:2px solid var(--ink);border-radius:10px;padding:0 8px;margin-left:4px;transform:rotate(-4deg)}
 .ck{display:flex;gap:10px;align-items:flex-start;padding:5px 0;cursor:pointer}
 .ck input{position:absolute;opacity:0}
-.ck i{flex:none;width:26px;height:26px;border:3px solid var(--ink);border-radius:9px;margin-top:1px;background:var(--bg);position:relative}
+.ck i{flex:none;width:26px;height:26px;border:3px solid var(--ink);border-radius:99px;margin-top:1px;background:var(--bg);position:relative}
 .ck input:checked+i{background:var(--gr);animation:pop .4s cubic-bezier(.3,1.8,.5,1)}
 .ck input:checked+i::after{content:'';position:absolute;left:7px;top:1px;width:7px;height:13px;border:solid var(--ink);border-width:0 3px 3px 0;transform:rotate(45deg)}
 .ck input:checked~span{text-decoration:line-through;opacity:.55}
@@ -140,35 +140,35 @@ footer{text-align:center;font-size:13px;margin-top:30px}
 <script>
 const TG={F:'航班',T:'電車／特急',S:'地鐵',B:'巴士',W:'步行',K:'票券'};
 const D=[
-{d:'1/11',w:'一',weather:'🌤️ 名古屋氣溫約 2°C ~ 8°C，晴時多雲，體感偏冷需注意保暖',t:'抵達名古屋 → 名古屋城 → 榮商圈夜景',s:'住 Hotel Keihan Nagoya',i:[
+{d:'1/11',w:'一',weather:'🌤️ 名古屋氣溫約 2°C ~ 8°C，晴時多雲，體感偏冷需注意保暖',t:'抵達名古屋 → 名古屋城 → 榮商圈夜景',s:'住 京阪名古屋飯店 Hotel Keihan Nagoya',i:[
 ['F','桃園 → 中部國際機場','08:45 起飛、12:25 抵達 T1（IT206）。領完行李走到「Access Plaza／名鐵」，T1 四樓商店街可用餐採買。'],
 ['T,K','名鐵 μ-SKY 特急 → 名鐵名古屋站','約 28 分鐘。需「乘車券 + μticket 指定席券（450円）」。'],
 ['S,W','地鐵櫻通線 → 飯店寄放行李','名古屋站搭櫻通線（往德重）1 站到久屋大通，4A / 4B 出口步行 2–3 分鐘。'],
 ['S,W','名古屋城 16:30休息','久屋大通搭名城線到名古屋城站，7 號出口步行；參觀天守閣與庭園。',1],
 ['W','榮商圈夜景','Oasis 21、MIRAI TOWER 周邊散步，再回飯店。']]},
-{d:'1/12',w:'二',weather:'☃️ 高山・白川鄉氣溫約 -4°C ~ 3°C，晴時有雪/積雪，請穿著防滑保暖靴',t:'飛驒高山老街 + 白川鄉合掌村一日團',s:'住 Hotel Keihan Nagoya',i:[
+{d:'1/12',w:'二',weather:'☃️ 高山・白川鄉氣溫約 -4°C ~ 3°C，晴時有雪/積雪，請穿著防滑保暖靴',t:'飛驒高山老街 + 白川鄉合掌村一日團',s:'住 京阪名古屋飯店 Hotel Keihan Nagoya',i:[
 ['S,W','飯店 → 名古屋站','久屋大通搭櫻通線到名古屋站，步行 5–10 分鐘到集合點。'],
 ['B,K','一日團集合 07:30／出發 08:00','名古屋 VIP LINER 巴士站（〒453-0015）。依 KKday 憑證時間，提早 20 分鐘報到。'],
 ['B','飛驒高山古街 + 白川鄉合掌村','品嚐飛驒牛握壽司，欣賞世界遺產合掌村的冬日雪景，傍晚隨車返回名古屋站。',1],
 ['S','回飯店 + 晚餐','名古屋站搭櫻通線回久屋大通；晚餐吃手羽先或味噌豬排。']]},
-{d:'1/13',w:'三',weather:'☀️ 犬山氣溫約 1°C ~ 9°C，晴朗乾燥，沿河散步注意風大',t:'國寶犬山城 + 城下町老街 + 大須商店街',s:'住 Hotel Keihan Nagoya',i:[
+{d:'1/13',w:'三',weather:'☀️ 犬山氣溫約 1°C ~ 9°C，晴朗乾燥，沿河散步注意風大',t:'國寶犬山城 + 城下町老街 + 大須商店街',s:'住 京阪名古屋飯店 Hotel Keihan Nagoya',i:[
 ['S','09:00 左右出發','久屋大通搭地鐵到名古屋站。'],
 ['T','名鐵犬山線 → 犬山站','名古屋站搭特急／快速急行，約 30–35 分鐘。'],
 ['W','犬山城 + 城下町（午餐）','步行 15–20 分鐘。犬山城天守 → 三光稻荷神社（心形繪馬）→ 城下町享用串燒、五平餅。',1],
 ['T','16:30–17:00 搭名鐵返回','下午可續逛神社，欣賞木曽川河畔景色。'],
 ['S','大須商店街夜市','名古屋站搭東山線到伏見，轉鶴舞線到大須觀音站，逛小吃與雜貨。']]},
-{d:'1/14',w:'四',weather:'🌤️ 伊勢・長島氣溫約 3°C ~ 9°C，多雲時晴，夜晚點燈氣溫驟降需厚外套',t:'伊勢神宮 + 長島 Outlet + 名花之里點燈',s:'住 Hotel Keihan Nagoya',i:[
+{d:'1/14',w:'四',weather:'🌤️ 伊勢・長島氣溫約 3°C ~ 9°C，多雲時晴，夜晚點燈氣溫驟降需厚外套',t:'伊勢神宮 + 長島 Outlet + 名花之里點燈',s:'住 京阪名古屋飯店 Hotel Keihan Nagoya',i:[
 ['T,K','06:45 前搭近鐵特急往伊勢','近鐵名古屋站 → 宇治山田／伊勢市，約 1 小時 20 分。全車指定席，需另購特急券。'],
 ['B','三重交通巴士 → 伊勢神宮','今日排「內宮 + 托福橫丁」，外宮不排，留時間給長島與點燈。',1],
 ['T,B','12:30 前後移動：伊勢 → 長島 Outlet','近鐵往桑名方向，再轉三重交通巴士直達 Outlet，含候車約 1.5–2 小時。'],
 ['B','15:00 逛 Outlet → 17:00 名花之里','購物、下午茶後前往名花之里，欣賞日本最大規模的冬季點燈。',1],
 ['B,T,S,W','夜間回程五步驟','① 名花之里接駁巴士 → 近鐵桑名站　② 近鐵 → 近鐵名古屋站　③ 站內轉地鐵名古屋站　④ 櫻通線 1 站到久屋大通　⑤ 4A / 4B 出口步行回飯店。']]},
-{d:'1/15',w:'五',weather:'🌤️ 長久手地區氣溫約 1°C ~ 8°C，多雲時晴，園區戶外行走多請注重保暖與舒適鞋款',t:'吉卜力公園全日探險（愛・地球博紀念公園）',s:'住 Hotel Keihan Nagoya',i:[
+{d:'1/15',w:'五',weather:'🌤️ 長久手地區氣溫約 1°C ~ 8°C，多雲時晴，園區戶外行走多請注重保暖與舒適鞋款',t:'吉卜力公園全日探險（愛・地球博紀念公園）',s:'住 京阪名古屋飯店 Hotel Keihan Nagoya',i:[
 ['S','08:35 左右出發','久屋大通搭櫻通線到名古屋，轉東山線到終點藤が丘（或先到榮轉東山線）。'],
-['T','轉乘 Linimo 磁浮電車','藤が丘轉 Linimo，到「愛・地球博紀念公園」站。'],
+['T','轉乘 Linimo 磁浮電車','藤價丘轉 Linimo，到「愛・地球博紀念公園」站。'],
 ['W','11:00 準時入園：吉卜力整日探險','10:30 前抵達，依票券時段入場。大倉庫、魔女之谷、青春之丘玩一整天，不排其他行程。',1],
 ['T,S','閉園後原路返回','Linimo → 藤價丘 → 東山線到榮 → 名城線到久屋大通 → 步行回飯店。']]},
-{d:'1/16',w:'六',weather:'⛅ 京都氣溫約 1°C ~ 7°C，多雲，古都風大體感偏冷',t:'清洲城 → 熱田神宮 → 新幹線到京都 → 錦市場・花見小路',s:'住京都（松原通丸九東入俗成町 438）',i:[
+{d:'1/16',w:'六',weather:'⛅ 京都氣溫約 1°C ~ 7°C，多雲，古都風大體感偏冷',t:'清洲城 → 熱田神宮 → 新幹線到京都 → 錦市場・花見小路',s:'住 京都四條烏丸佳閣飯店 438 Shunzeicho, 下京區,600-8417京都市, 京都府, 日本',i:[
 ['T','上午：清洲城','久屋大通 → 名古屋站 → 名鐵到新清洲站，步行到清洲城（織田信長居城）。'],
 ['T','名鐵直達熱田神宮','新清洲站搭名鐵直達神宮前站，步行參拜名古屋總鎮守。',1],
 ['T,K','東海道新幹線 → 京都（約 35 分）','神宮前搭名鐵回名古屋站，換 JR 東海道新幹線直達京都站。'],
